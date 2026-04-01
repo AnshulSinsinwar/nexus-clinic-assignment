@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageWrapper from './PageWrapper';
 
 const DOCTORS = [
   {
@@ -95,7 +96,7 @@ const VALUES = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <PageWrapper>
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero__bg-grid" aria-hidden="true" />
@@ -117,7 +118,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="page-hero__image">
-          <img src="/about-hero.png" alt="Trusted Nexus Clinic Specialist Doctor" />
+          <img src="/med first.jpg.jpeg" alt="Trusted Nexus Clinic Specialist Doctor" />
         </div>
       </section>
 
@@ -335,6 +336,6 @@ export default function AboutPage() {
           Book Your Free Consultation Today
         </Link>
       </div>
-    </main>
+    </PageWrapper>
   );
 }

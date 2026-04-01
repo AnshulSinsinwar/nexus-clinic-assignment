@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { Navbar, Footer } from './Layout';
 import HomePage from './HomePage';
 import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import './App.css';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
@@ -20,11 +34,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
   );

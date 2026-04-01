@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import PageWrapper from './PageWrapper';
 
 const SERVICES = [
   {
@@ -215,7 +216,7 @@ export default function ServicesPage() {
   const active = SERVICES.find((s) => s.id === activeTab);
 
   return (
-    <main>
+    <PageWrapper>
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero__bg-grid" aria-hidden="true" />
@@ -341,6 +342,6 @@ export default function ServicesPage() {
           Speak to a Doctor — It's Free
         </Link>
       </div>
-    </main>
+    </PageWrapper>
   );
 }

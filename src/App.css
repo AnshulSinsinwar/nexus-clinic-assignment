@@ -23,10 +23,13 @@
   --off-black: #ffffff;
   --dark: #f0ebe1;
   --mid: #e3d9c8;
-  --white: #0a0908;
-  --white-dim: rgba(10,9,8,0.7);
-  --border: rgba(201,169,110,0.4);
+  --white: #161311;
+  --white-dim: #423b36;
+  --border: rgba(201,169,110,0.5);
   --nav-bg: rgba(252,251,250,0.92);
+  --gold: #a38249;
+  --gold-light: #c9a96e;
+  --teal: #619a87;
 }
 
 /* ── Reset & Base ───────────────────────────────────────────────────────────── */

@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import PageWrapper from './PageWrapper';
+
+function ScrollTransition({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function Hero() {
   return (
@@ -219,13 +235,13 @@ function BookingCTA() {
 
 export default function HomePage() {
   return (
-    <main>
+    <PageWrapper>
       <Hero />
-      <TrustBar />
-      <FeaturedServices />
-      <WhyNexus />
-      <Testimonials />
-      <BookingCTA />
-    </main>
+      <ScrollTransition><TrustBar /></ScrollTransition>
+      <ScrollTransition><FeaturedServices /></ScrollTransition>
+      <ScrollTransition><WhyNexus /></ScrollTransition>
+      <ScrollTransition><Testimonials /></ScrollTransition>
+      <ScrollTransition><BookingCTA /></ScrollTransition>
+    </PageWrapper>
   );
 }
