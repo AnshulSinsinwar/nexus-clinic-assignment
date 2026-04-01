@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-export function Navbar() {
+export function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -48,6 +48,11 @@ export function Navbar() {
           <Link to="/#book" className="nav-cta" onClick={() => setMenuOpen(false)}>
             Book Free Consultation
           </Link>
+        </li>
+        <li>
+          <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </li>
       </ul>
       <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">

@@ -41,7 +41,7 @@ function Hero() {
         <div className="hero__card hero__card--float hero__card--2">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="8" fill="#C9A96E" />
-            <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 8l2 2 4-4" stroke="var(--white)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <span>Non-surgical · No downtime</span>
         </div>
@@ -173,8 +173,8 @@ function BookingCTA() {
       <div className="booking__inner">
         <div className="booking__left">
           <span className="section__label">Get Started</span>
-          <h2 className="section__title" style={{ color: '#fff' }}>Begin With a<br /><em>Free Consultation</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginTop: '1rem' }}>
+          <h2 className="section__title" style={{ color: 'var(--white)' }}>Begin With a<br /><em>Free Consultation</em></h2>
+          <p style={{ color: 'var(--white-dim)', lineHeight: 1.8, marginTop: '1rem' }}>
             No obligations. No pressure. Just an honest conversation about your goals and how we can help — medically and ethically.
           </p>
           <div className="booking__contact">
