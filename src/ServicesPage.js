@@ -215,7 +215,7 @@ export default function ServicesPage() {
   const active = SERVICES.find((s) => s.id === activeTab);
 
   return (
-    <main>
+    <main style={{ marginTop: '130px', paddingBottom: '28px', fontFamily: 'Tahoma, sans-serif' }}>
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero__bg-grid" aria-hidden="true" />
