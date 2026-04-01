@@ -241,6 +241,9 @@ export default function ServicesPage() {
             Book Free Consultation
           </Link>
         </div>
+        <div className="page-hero__image">
+          <img src="/services-hero.png" alt="Modern Medical Aesthetic Clinic Treatment Room" />
+        </div>
       </section>
 
       {/* Category Tabs */}

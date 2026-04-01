@@ -116,6 +116,9 @@ export default function AboutPage() {
             promise: honest, evidence-based care.
           </p>
         </div>
+        <div className="page-hero__image">
+          <img src="/about-hero.png" alt="Trusted Nexus Clinic Specialist Doctor" />
+        </div>
       </section>
 
       {/* Mission Statement */}
